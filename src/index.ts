@@ -1,4 +1,6 @@
+// Aayushi shah-N01523081 and
 
+// Jude Okagu -N01407704
 
 let answer : number
 let randomNumber1 : number
