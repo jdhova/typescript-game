@@ -17,8 +17,13 @@ let score2 = score > 3 && score < 6 ? score :''
 
 const scoreBoard = document.querySelector<HTMLParagraphElement>('.score');
 const highScoreBoard = document.querySelector<HTMLParagraphElement>('.highScore');
-const message1 =   document.querySelector<HTMLHeadingElement>('.message1')
+// const message1 = document.querySelector<HTMLHeadingElement>('.message1')
+// const messageone  = document.querySelector<HTMLHeadingElement>('.message1');
+
 const message  = document.querySelector<HTMLHeadingElement>('.message');
+
+const messageone  = document.querySelector<HTMLHeadingElement>('.messageone');
+
 const restartGame = document.querySelector<HTMLButtonElement>('.restartGame');
 const start = document.querySelector<HTMLButtonElement>('.start');
 const restart = document.querySelector<HTMLButtonElement>('.reset');
@@ -27,8 +32,8 @@ const img = document.querySelector<HTMLImageElement>("img");
 
 
 
+generateNum = () => {
 
- generateNum = (randomNumber1 : number, randomNumber2: number, answer: number ) => {
 
   console.log('here im here now working')
                     
@@ -36,19 +41,65 @@ const img = document.querySelector<HTMLImageElement>("img");
   randomNumber2 = Math.floor(Math.random() * 10) + 1;
   answer = randomNumber1 + randomNumber2;
 
-  console.log('and',answer)
-  console.log('num',randomNumber1 , randomNumber2)
+  console.log('im here1',answer)
+  console.log('im here 1',randomNumber1 , randomNumber2)
 
-  if (message1?.innerText == '' || message1?.innerText == null) return
-  message1.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = `;
+
+  if (messageone?.innerText == '' || 
+  messageone?.innerText == null) return
+  // messageone.innerText = 'start...!';
+  messageone.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = `
+  console.log(messageone.innerText,'jeeed22')
 
   if (userInput?.value == '' || userInput?.value == null) return
   userInput.value = '';
 
 
-  message1.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = ` ; 
-  userInput.value = '';  
+  // if (message1?.innerText == '' || message1?.innerText == null) return
+  // message1.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = `;
+  
+ 
+
+
+  
+  console.log('num',randomNumber1 , randomNumber2)
+
+  // if (userInput?.value == '' || userInput?.value == null) return
+  // userInput.value = '';
+
+  // messageone.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2}) = ` ; 
+  // message1.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = ` ; 
+  userInput.value = ''; 
+  
+  
 }
+
+// BUG HOW DO I CONVART INNER TEXT TO ACCET NUMBER
+
+
+
+
+//  generateNum = (randomNumber1 : number, randomNumber2: number, answer: number ) => {
+
+//   console.log('here im here now working')
+                    
+//   randomNumber1 = Math.floor(Math.random() * 10) + 1;
+//   randomNumber2 = Math.floor(Math.random() * 10) + 1;
+//   answer = randomNumber1 + randomNumber2;
+
+//   console.log('and',answer)
+//   console.log('num',randomNumber1 , randomNumber2)
+
+//   if (message1?.innerText == '' || message1?.innerText == null) return
+//   message1.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = `;
+
+//   if (userInput?.value == '' || userInput?.value == null) return
+//   userInput.value = '';
+
+
+//   message1.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = ` ; 
+//   userInput.value = '';  
+// }
 
 
 // myAdd = function (x: number, y: number) {
@@ -59,35 +110,18 @@ const img = document.querySelector<HTMLImageElement>("img");
 
 
 start?.addEventListener('click',  function (){
-  console.log('srart now')
-
-  console.log('here im here now 1')
-
+ 
 
    if (message?.innerText == '' || message?.innerText == null) return
    message.innerText = 'start...!';
-   console.log('here im here now2a')
+   console.log(message.innerText,'jeeed1')
 
-  //  if ( restartGame?.style.display == '' ||  restartGame?.style.display == null) return
-  //  restartGame.style.display = 'none...!';
 
-   console.log('here im here now2b')
 
-  //  if ( userInput?.disabled == null) return
-  //  userInput.disabled = false;
-
-     console.log('here im here now2')
-   
-                    
  
+   
+  
 
-  //  if (message?.innerText == '' || message?.innerText == null) return
-  //  message.innerText = 'start...!';
-
-  //  (restartGame?.style.display == '' || restartGame?.style.display ) ?  restartGame.style.display = 'none'
-
-  // message.innerText = 'start...!';
-  // restartGame.style.display = 'none';
 
    if (scoreBoard?.innerText || scoreBoard?.innerText == null) return
    scoreBoard.innerText =  '1';
