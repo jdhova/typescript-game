@@ -1,4 +1,4 @@
-// console.log('working now')
+
 
 let answer : number
 let randomNumber1 : number
@@ -11,8 +11,6 @@ let generateNum : Function
 let gameOver : Function
 
 let score2 = score > 3 && score < 6 ? score :''
-
-
 
 
 const scoreBoard = document.querySelector<HTMLParagraphElement>('.score');
@@ -30,13 +28,12 @@ const start = document.querySelector<HTMLButtonElement>('.start');
 const check = document.querySelector<HTMLButtonElement>('.check');
 
 const restart = document.querySelector<HTMLButtonElement>('.reset');
-// const userInput = document.querySelector<HTMLInputElement>('.input');
+
 
 const userInput = document.querySelector<HTMLInputElement>('.guess');
 
 
 const img = document.querySelector<HTMLImageElement>("img");
-
 
 
 generateNum = () => {
@@ -52,8 +49,7 @@ generateNum = () => {
   console.log(userInput?.value, 'whats here 1')
 
   if (userInput?.value == '' || userInput?.value == null) return
-  // userInput.value = ''; /// recheck this
-  console.log(userInput?.value, 'whats here2')
+  
   
 }
 
@@ -91,9 +87,6 @@ generateNum = () => {
 
 
 
-
-
-
 start?.addEventListener('click',  function (){
  
 
@@ -112,8 +105,6 @@ start?.addEventListener('click',  function (){
 }
   
   );
-
-
    
 
   check?.addEventListener('click', function () {
@@ -123,27 +114,11 @@ start?.addEventListener('click',  function (){
 
     if (userInput?.value == '' || userInput?.value == null) return 
  
-    // get the input value here is the bug
-    // console.log(answer,'why heheh')
-    //  console.log(userInput.value,'heheh')
-    // console.log(Number(userInput.value),'= imput',answer,'=ans')
-
     let num = (Number(userInput.value))
 
     console.log(num,answer)
     
 
-    // userInput.value = '';
-
-    // if (message?.innerText == '' || message?.innerText == null) return 
-    // message.innerText = '';
-    
-    // if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
-    // scoreBoard.innerText = '';
-    
-
-     
-    // if (Number(userInput.value) === answer && score < 3) 
 
     if (num === answer )  {
  
@@ -166,11 +141,15 @@ start?.addEventListener('click',  function (){
        message.innerText = 'Wrong!'
         // message.innerText = '';
            if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
-
         score -= 1;
         scoreBoard.innerText = String(score);
        generateNum();
          userInput.value = '';
+         
+
+    } else if (num !== answer && score < 0) {
+      console.log(score, 'is score')
+      gameOver()
     }
 
 
