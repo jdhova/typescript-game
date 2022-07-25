@@ -84,7 +84,7 @@ h2 {
 // flex-direction column
 // align-items center */
 
-.message1 {
+.messageone {
   display: flex;
   flex-direction: row;
   align-items: center;
