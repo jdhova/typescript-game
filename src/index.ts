@@ -124,34 +124,68 @@ start?.addEventListener('click',  function (){
     if (userInput?.value == '' || userInput?.value == null) return 
  
     // get the input value here is the bug
-    console.log(answer,'heheh')
-    console.log(userInput.value,'heheh')
-    userInput.value = '';
+    // console.log(answer,'why heheh')
+    //  console.log(userInput.value,'heheh')
+    // console.log(Number(userInput.value),'= imput',answer,'=ans')
+
+    let num = (Number(userInput.value))
+
+    console.log(num,answer)
     
-    if (message?.innerText == '' || message?.innerText == null) return 
-    message.innerText = '';
+
+    // userInput.value = '';
+
+    // if (message?.innerText == '' || message?.innerText == null) return 
+    // message.innerText = '';
     
-    if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
-    scoreBoard.innerText = '';
+    // if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
+    // scoreBoard.innerText = '';
     
 
      
-    if (parseInt(userInput.value) === answer && score < 3)  return 
-          message.innerText = 'Correct!'
-          score += 1;
-          scoreBoard.innerText = String(score);
-          generateNum();
+    // if (Number(userInput.value) === answer && score < 3) 
 
-    if (parseInt(userInput.value) !== answer && score >  0 && score < 3) 
-          score -= 1;
-          scoreBoard.innerText = String(score);
-          console.log(userInput.value, )
-          message.innerText = 'why Wrong !';
-          generateNum();
+    if (num === answer )  {
+ 
+            if (message?.innerText == '' || message?.innerText == null) return 
+        // message.innerText = '';
+
+         message.innerText = 'Correct!'
+     
+    }
 
 
-      if (parseInt(userInput.value) !== answer && score === 0)  
-          gameOver() 
+    // // if (Number(userInput.value) === answer ) 
+    // // console.log(Number(userInput.value), answer)
+    // return 
+    // console.log(num,'home', 'legooo')
+    //     //  console.log(Number(userInput.value), answer, 'legooo')
+    //     //  console.log(userInput.value, answer, 'legooo2')
+
+    //     if (message?.innerText == '' || message?.innerText == null) return 
+    //     // message.innerText = '';
+
+    //     message.innerText = 'Correct!'
+
+    //     // if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
+    //     // scoreBoard.innerText = '';
+
+          
+    //       // score += 1;
+    //       // scoreBoard.innerText = String(score);
+    //       generateNum();
+    //        userInput.value = '';
+
+    // if (parseInt(userInput.value) !== answer && score >  0 && score < 3) 
+    //       score -= 1;
+    //       scoreBoard.innerText = String(score);
+    //       console.log(userInput.value, )
+    //       message.innerText = 'why Wrong !';
+    //       generateNum();
+
+
+    //   if (parseInt(userInput.value) !== answer && score === 0)  
+    //       gameOver() 
 
 
 
