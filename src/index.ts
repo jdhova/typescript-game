@@ -151,7 +151,26 @@ start?.addEventListener('click',  function (){
         // message.innerText = '';
 
          message.innerText = 'Correct!'
+          // message.innerText = '';
+             if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
+
+          score += 1;
+          scoreBoard.innerText = String(score);
+         generateNum();
+           userInput.value = '';
      
+    } else if (num !== answer) {
+      if (message?.innerText == '' || message?.innerText == null) return 
+      // message.innerText = '';
+
+       message.innerText = 'Wrong!'
+        // message.innerText = '';
+           if (scoreBoard?.innerText == '' || scoreBoard?.innerText == null) return 
+
+        score -= 1;
+        scoreBoard.innerText = String(score);
+       generateNum();
+         userInput.value = '';
     }
 
 
