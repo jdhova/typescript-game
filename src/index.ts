@@ -30,7 +30,11 @@ const start = document.querySelector<HTMLButtonElement>('.start');
 const check = document.querySelector<HTMLButtonElement>('.check');
 
 const restart = document.querySelector<HTMLButtonElement>('.reset');
-const userInput = document.querySelector<HTMLInputElement>('input');
+// const userInput = document.querySelector<HTMLInputElement>('.input');
+
+const userInput = document.querySelector<HTMLInputElement>('.guess');
+
+
 const img = document.querySelector<HTMLImageElement>("img");
 
 
@@ -45,8 +49,11 @@ generateNum = () => {
   messageone?.innerText == null) return
   messageone.innerText = `${randomNumber1} ` + '+ ' + `${randomNumber2} = `
 
-  if (userInput?.value != '' || userInput?.value == null) return
-  userInput.value = ''; /// recheck this
+  console.log(userInput?.value, 'whats here 1')
+
+  if (userInput?.value == '' || userInput?.value == null) return
+  // userInput.value = ''; /// recheck this
+  console.log(userInput?.value, 'whats here2')
   
 }
 
@@ -115,11 +122,12 @@ start?.addEventListener('click',  function (){
 
 
     if (userInput?.value == '' || userInput?.value == null) return 
-    userInput.value = '';
+ 
     // get the input value here is the bug
     console.log(answer,'heheh')
     console.log(userInput.value,'heheh')
-
+    userInput.value = '';
+    
     if (message?.innerText == '' || message?.innerText == null) return 
     message.innerText = '';
     
