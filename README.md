@@ -1,5 +1,11 @@
 # New Project
 
+# COMPLETE
+
+## Aayushi shah-N01523081 and
+
+## Jude Okagu -N01407704
+
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
 ## Available Scripts
