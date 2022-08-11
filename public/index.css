@@ -23,7 +23,7 @@ body {
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  height: 15vh;
   border-bottom: 0px solid #eee;
 }
 
@@ -31,9 +31,14 @@ main {
   height: 65vh;
   color: #eee;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+@media (min-width:320px)  {
+  main{
+    flex-direction: column;
+  }
 }
 
 /* .head2{
@@ -44,6 +49,7 @@ main {
 
 .left {
   width: 52rem;
+  /* display: flex; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,38 +66,18 @@ h2 {
   text-align: center;
   position: absolute;
   width: 100%;
-  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* .messages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  width: 100%;
-  height: 100%;
-} */
-
-/* 
-// aligh items center
-// justify content space-around
-// flex-direction column
-// align-items center
-// justify-content center
-// flex-direction column
-// align-items center */
 
 .messageone {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 7rem;
+  font-size: 4rem;
   width: 100%;
-  height: 70vh;
+  height: 40vh;
 }
 
 .number {
@@ -149,10 +135,11 @@ h2 {
 }
 
 .message {
-  margin-bottom: 8rem;
-  height: 3rem;
+  margin-top: 40px;
+  margin-left:100px;
 }
 
 .label-score {
-  margin-bottom: 2rem;
+  margin-top: 40px;
+  margin-left: 100px;
 }

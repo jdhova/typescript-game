@@ -7,7 +7,7 @@ let randomNumber1 : number
 let randomNumber2 : number
 let randomNumber3 : number
 let randomNumber4 : number
-let score : number = 1;
+let score : number = 0;
 let highScore : number = 0;
 let generateNum : Function
 let gameOver : Function
@@ -89,7 +89,7 @@ start?.addEventListener('click',  function (){
 
 
    if (scoreBoard?.innerText || scoreBoard?.innerText == null) return
-   scoreBoard.innerText =  '1';
+   scoreBoard.innerText =  '0';
 
   let score : number = 1   
    
