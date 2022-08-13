@@ -3,7 +3,7 @@ let randomNumber1;
 let randomNumber2;
 let randomNumber3;
 let randomNumber4;
-let score = 1;
+let score = 0;
 let highScore = 0;
 let generateNum;
 let gameOver;
@@ -51,7 +51,7 @@ start?.addEventListener("click", function() {
   message.innerText = "start...!";
   if (scoreBoard?.innerText || scoreBoard?.innerText == null)
     return;
-  scoreBoard.innerText = "1";
+  scoreBoard.innerText = "0";
   let score3 = 1;
   generateNum();
 });
